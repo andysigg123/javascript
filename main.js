@@ -8,26 +8,25 @@ const listaDeTecla = document.querySelectorAll('.tecla');
 for(let contador = 0; contador < listaDeTeclas.length; contador++){
 
     const tecla =  listaDeTecla[contador];
-const intrumento = tecla.classList[1];
-const idAudio = `Som_${intrumento}`;
+    const intrumento = tecla.classList[1];
+    const idAudio = `Som_${intrumento}`;
 
-tecla.onclick = function (){
+tecla.onclick = function () {
     tocaSom(idAudio);
 }
 
 tecla.onkeydown = function (evento){
-    
-}
 
-document.querySelectorAll('.tecla');
-listaDeTecla[0].onclick = tocaSom;
+    console.log(evento.code == 'Space') 
 
-listaDeTecla[0].onclick = tocaSomPom;
-let contador = 0;
-//Estrutura de repetição - Enquanto
-while(contador < listaDeTecla.length) {
-listaDeTecla[contador].onclick = tocaSomPom;
+        if (evento.code ==='Space'){
+ tecla.onkeydown = function()
+            tecla.classList.add('ativa');
 
-contador = contador + 1; 
-console.log(contador);
+    }
+    }
+ tecla.onkeyup = function () {
+    tecla.classList.remove('ativa');
+    }
+
 }
