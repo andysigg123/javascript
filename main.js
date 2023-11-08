@@ -21,7 +21,9 @@ tecla.onkeydown = function (evento){
 
         if (evento.code ==='Space'){
  tecla.onkeydown = function()
- se (evento.code == 'Enter') {
+ 
+se (evento.code == 'Enter') 
+ {
             tecla.classList.add('ativa');
 
     }
